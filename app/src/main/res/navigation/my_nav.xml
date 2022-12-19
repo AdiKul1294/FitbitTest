@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fitbitAuthFragment">
+
+    <fragment
+        android:id="@+id/fitbitAuthFragment"
+        android:name="com.example.fitbittest.fragments.FitbitAuthFragment"
+        android:label="FitbitAuthFragment" >
+        <action
+            android:id="@+id/action_fitbitAuthFragment_to_userDataFragment"
+            app:destination="@id/userDataFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDataFragment"
+        android:name="com.example.fitbittest.fragments.UserDataFragment"
+        android:label="UserDataFragment" >
+        <action
+            android:id="@+id/action_userDataFragment_to_fitbitAuthFragment"
+            app:destination="@id/fitbitAuthFragment" />
+    </fragment>
+</navigation>
